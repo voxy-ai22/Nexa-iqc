@@ -206,7 +206,7 @@ export default function App() {
           </h1>
         </motion.div>
         <p className="text-zinc-400 font-medium text-lg max-w-md">
-          Bikin quote kartu karakter kamu jadi makin keren di sini! 🚀
+          Buat Iqc iphone generator di sini! 🚀
         </p>
       </header>
 
