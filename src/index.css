@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Lexend", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-100 font-sans antialiased;
+  }
+}
+
+.neo-brutal {
+  @apply border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200;
+}
+
+.neo-brutal:active {
+  @apply translate-x-[2px] translate-y-[2px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)];
+}
+
+.neo-brutal-no-hover {
+  @apply border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+}
+
+@keyframes scan {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+.scanning-line {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #22c55e;
+  box-shadow: 0 0 15px #22c55e, 0 0 30px #22c55e;
+  animation: scan 2s linear infinite;
+  z-index: 10;
+}
